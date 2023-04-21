@@ -2,9 +2,9 @@ package buildingCompany.residental;
 
 import buildingCompany.Building;
 
-abstract class ResidentalBuilding extends Building {
+public abstract class ResidentalBuilding extends Building {
 
-    public int capacity;
+    private int capacity;
 
     public ResidentalBuilding(String address, int floors, boolean garage, int capacity) {
         super(address, floors, garage);
@@ -22,10 +22,7 @@ abstract class ResidentalBuilding extends Building {
     @Override
     public String toString() {
         return "ResidentalBuilding{" +
-                "address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", capacity=" + capacity +
-                '}';
+                "capacity=" + capacity +
+                "} " + super.toString();
     }
 }

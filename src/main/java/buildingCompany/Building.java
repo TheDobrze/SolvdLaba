@@ -1,10 +1,10 @@
 package buildingCompany;
 
-public abstract class Building {
+public abstract class Building implements Buildable{
 
-    public String address;
-    public int floors;
-    public boolean garage;
+    private String address;
+    private int floors;
+    private boolean garage;
 
     public Building(String address, int floors, boolean garage) {
         this.address = address;

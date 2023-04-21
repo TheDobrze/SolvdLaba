@@ -30,12 +30,13 @@ public class Restaurant extends AssemblyBuilding{
     @Override
     public String toString() {
         return "Restaurant{" +
-                "capacity=" + capacity +
-                ", toilets=" + toilets +
-                ", address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
+                "kitchen=" + kitchen +
                 ", drinkBar=" + drinkBar +
-                '}';
+                "} " + super.toString();
+    }
+
+    @Override
+    public void build() {
+
     }
 }

@@ -48,16 +48,17 @@ public class House extends ResidentalBuilding{
     }
 
     @Override
+    public void build() {
+
+    }
+
+    @Override
     public String toString() {
         return "House{" +
-                "address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", attic=" + attic +
+                "attic=" + attic +
                 ", basement=" + basement +
                 ", garden=" + garden +
                 ", SwimmingPool=" + SwimmingPool +
-                ", capacity=" + capacity +
-                '}';
+                "} " + super.toString();
     }
 }

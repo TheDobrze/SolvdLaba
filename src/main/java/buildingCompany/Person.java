@@ -1,13 +1,13 @@
-package buildingCompany.employees;
+package buildingCompany;
 
 import java.util.Date;
 
-abstract class Person {
+public abstract class Person {
 
-    public int id;
-    public String Name;
-    public String LastName;
-    public Date joined;
+    private int id;
+    private String Name;
+    private String LastName;
+    private Date joined;
 
     public Person(int id, String name, String lastName, Date joined) {
         this.id = id;

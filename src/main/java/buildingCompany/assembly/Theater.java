@@ -30,13 +30,13 @@ public class Theater extends AssemblyBuilding{
     @Override
     public String toString() {
         return "Theater{" +
-                "capacity=" + capacity +
-                ", address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                "toilets=" + toilets+
-                ", screeningRoom=" + screeningRoom +
+                "screeningRoom=" + screeningRoom +
                 ", popcornBooth=" + popcornBooth +
-                '}';
+                "} " + super.toString();
+    }
+
+    @Override
+    public void build() {
+
     }
 }

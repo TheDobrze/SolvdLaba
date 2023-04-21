@@ -1,8 +1,10 @@
 package buildingCompany.employees;
 
+import buildingCompany.Person;
+
 import java.util.Date;
 
-public class Designers extends Person{
+public class Designers extends Person implements Worker{
 
     private int salary;
     private String speciality;
@@ -30,14 +32,15 @@ public class Designers extends Person{
     }
 
     @Override
+    public void work() {
+        System.out.println("Making a buildin plan");
+    }
+
+    @Override
     public String toString() {
         return "Designers{" +
                 "salary=" + salary +
                 ", speciality='" + speciality + '\'' +
-                ", id=" + id +
-                ", Name='" + Name + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", joined=" + joined +
-                '}';
+                "} " + super.toString();
     }
 }

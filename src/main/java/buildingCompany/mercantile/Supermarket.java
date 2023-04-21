@@ -20,11 +20,12 @@ public class Supermarket extends MercantileBuilding{
     @Override
     public String toString() {
         return "Supermarket{" +
-                "address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", supplyBase=" + supplyBase +
                 ", warehouse=" + warehouse +
-                '}';
+                "} " + super.toString();
+    }
+
+    @Override
+    public void build() {
+
     }
 }

@@ -38,15 +38,16 @@ public class Mall extends MercantileBuilding{
     }
 
     @Override
+    public void build() {
+        System.out.println("Building mall:)");
+    }
+
+    @Override
     public String toString() {
         return "Mall{" +
-                "address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", elevators=" + elevators +
+                "elevators=" + elevators +
                 ", buffets=" + buffets +
                 ", toilets=" + toilets +
-                ", supplyBase=" + supplyBase +
-                '}';
+                "} " + super.toString();
     }
 }

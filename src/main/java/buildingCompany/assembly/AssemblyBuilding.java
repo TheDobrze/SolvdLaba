@@ -4,8 +4,8 @@ import buildingCompany.Building;
 
 abstract class AssemblyBuilding extends Building {
 
-    public int capacity;
-    public int toilets;
+    private int capacity;
+    private int toilets;
 
     public AssemblyBuilding(String address, int floors, boolean garage, int capacity,int toilets) {
         super(address, floors, garage);
@@ -32,11 +32,8 @@ abstract class AssemblyBuilding extends Building {
     @Override
     public String toString() {
         return "AssemblyBuilding{" +
-                ", address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
                 "capacity=" + capacity +
-                "toilets=" + toilets+
-                '}';
+                ", toilets=" + toilets +
+                "} " + super.toString();
     }
 }

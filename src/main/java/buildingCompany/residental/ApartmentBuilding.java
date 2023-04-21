@@ -30,12 +30,13 @@ public class ApartmentBuilding extends ResidentalBuilding{
     @Override
     public String toString() {
         return "ApartmentBuilding{" +
-                "address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", elevator=" + elevator +
+                "elevator=" + elevator +
                 ", rooftopAccess=" + rooftopAccess +
-                ", capacity=" + capacity +
-                '}';
+                "} " + super.toString();
+    }
+
+    @Override
+    public void build() {
+
     }
 }

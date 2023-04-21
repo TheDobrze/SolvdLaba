@@ -4,7 +4,7 @@ import buildingCompany.Building;
 
 abstract class MercantileBuilding extends Building {
 
-    public int supplyBase;
+    private int supplyBase;
 
 
     public MercantileBuilding(String address, int floors, boolean garage,int supplyBase) {
@@ -23,10 +23,7 @@ abstract class MercantileBuilding extends Building {
     @Override
     public String toString() {
         return "MercantileBuilding{" +
-                "address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", supplyBase=" + supplyBase +
-                '}';
+                "supplyBase=" + supplyBase +
+                "} " + super.toString();
     }
 }

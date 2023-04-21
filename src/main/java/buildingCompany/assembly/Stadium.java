@@ -20,12 +20,12 @@ public class Stadium  extends AssemblyBuilding{
     @Override
     public String toString() {
         return "Stadium{" +
-                "capacity=" + capacity +
-                ", toilets=" + toilets +
-                ", address='" + address + '\'' +
-                ", floors=" + floors +
-                ", garage=" + garage +
-                ", gates=" + gates +
-                '}';
+                "gates=" + gates +
+                "} " + super.toString();
+    }
+
+    @Override
+    public void build() {
+
     }
 }

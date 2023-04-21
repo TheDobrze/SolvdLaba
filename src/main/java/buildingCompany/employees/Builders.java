@@ -1,8 +1,10 @@
 package buildingCompany.employees;
 
+import buildingCompany.Person;
+
 import java.util.Date;
 
-public class Builders extends Person{
+public class Builders extends Person implements Worker {
 
     private int salary;
     private boolean forklift_certificate;
@@ -30,14 +32,15 @@ public class Builders extends Person{
     }
 
     @Override
+    public void work() {
+        System.out.println("Working on construction work");
+    }
+
+    @Override
     public String toString() {
         return "Builders{" +
                 "salary=" + salary +
                 ", forklift_certificate=" + forklift_certificate +
-                ", id=" + id +
-                ", Name='" + Name + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", joined=" + joined +
-                '}';
+                "} " + super.toString();
     }
 }
