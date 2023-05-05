@@ -1,10 +1,11 @@
 package buildingCompany.clients;
 
 import buildingCompany.Person;
+import buildingCompany.interfaces.Requestor;
 
 import java.util.Date;
 
-public class IndividualClient extends Person implements Requestor{
+final class IndividualClient extends Person implements Requestor {
 
     private int budget;
 

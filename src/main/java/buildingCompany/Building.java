@@ -1,6 +1,8 @@
 package buildingCompany;
 
-public abstract class Building implements Buildable{
+import buildingCompany.interfaces.Buildable;
+
+public abstract class Building implements Buildable {
 
     private String address;
     private int floors;

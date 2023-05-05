@@ -1,4 +1,4 @@
-package buildingCompany.employees;
+package buildingCompany.interfaces;
 
 public interface Worker {
 

@@ -1,15 +1,19 @@
 package buildingCompany.clients;
 
-public class CompanyClient implements Requestor{
+import buildingCompany.interfaces.Requestor;
+
+final class CompanyClient implements Requestor {
 
     private String name;
     private CompanySize size;
     private int budget;
+    final int krsNumber;
 
-    public CompanyClient(String name, CompanySize size, int budget) {
+    public CompanyClient(String name, CompanySize size, int budget, int krsNumber) {
         this.name = name;
         this.size = size;
         this.budget = budget;
+        this.krsNumber = krsNumber;
     }
 
     public String getName() {
@@ -36,6 +40,10 @@ public class CompanyClient implements Requestor{
         this.budget = budget;
     }
 
+    public int getKrsNumber(){
+        return krsNumber;
+    }
+
     @Override
     public void Request() {
 
@@ -47,6 +55,7 @@ public class CompanyClient implements Requestor{
                 "name='" + name + '\'' +
                 ", size=" + size +
                 ", budget=" + budget +
+                ", krs number= "+ krsNumber+
                 '}';
     }
 }

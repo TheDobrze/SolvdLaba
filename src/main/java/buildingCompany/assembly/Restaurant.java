@@ -1,5 +1,7 @@
 package buildingCompany.assembly;
 
+import java.util.Objects;
+
 public class Restaurant extends AssemblyBuilding{
 
     private int kitchen;
@@ -26,6 +28,21 @@ public class Restaurant extends AssemblyBuilding{
     public void setDrinkBar(int drinkBar) {
         this.drinkBar = drinkBar;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Restaurant that = (Restaurant) o;
+        return kitchen == that.kitchen && drinkBar == that.drinkBar;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(kitchen, drinkBar);
+    }
+
+
 
     @Override
     public String toString() {

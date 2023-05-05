@@ -1,5 +1,7 @@
 package buildingCompany.assembly;
 
+import java.util.Objects;
+
 public class Theater extends AssemblyBuilding{
 
     private int screeningRoom;
@@ -25,6 +27,19 @@ public class Theater extends AssemblyBuilding{
 
     public void setPopcornBooth(boolean popcornBooth) {
         this.popcornBooth = popcornBooth;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Theater theater = (Theater) o;
+        return screeningRoom == theater.screeningRoom && popcornBooth == theater.popcornBooth;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(screeningRoom, popcornBooth);
     }
 
     @Override

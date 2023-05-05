@@ -1,4 +1,4 @@
-package buildingCompany.clients;
+package buildingCompany.interfaces;
 
 public interface Requestor {
     void Request();

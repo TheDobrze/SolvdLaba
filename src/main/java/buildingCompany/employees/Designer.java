@@ -1,15 +1,18 @@
 package buildingCompany.employees;
 
 import buildingCompany.Person;
+import buildingCompany.interfaces.Payment;
+import buildingCompany.interfaces.Worker;
 
 import java.util.Date;
 
-public class Designers extends Person implements Worker{
+
+public class Designer extends Person implements Worker, Payment {
 
     private int salary;
     private String speciality;
 
-    public Designers(int id, String name, String lastName, Date joined, int salary, String speciality) {
+    public Designer(int id, String name, String lastName, Date joined, int salary, String speciality) {
         super(id, name, lastName, joined);
         this.salary = salary;
         this.speciality = speciality;
@@ -42,5 +45,14 @@ public class Designers extends Person implements Worker{
                 "salary=" + salary +
                 ", speciality='" + speciality + '\'' +
                 "} " + super.toString();
+    }
+
+    static {
+        System.out.println("My job is to design buildings");
+    }
+
+    @Override
+    public void getPaid() {
+
     }
 }

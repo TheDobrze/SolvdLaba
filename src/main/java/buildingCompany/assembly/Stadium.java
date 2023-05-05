@@ -1,5 +1,7 @@
 package buildingCompany.assembly;
 
+import java.util.Objects;
+
 public class Stadium  extends AssemblyBuilding{
 
     private int gates;
@@ -15,6 +17,19 @@ public class Stadium  extends AssemblyBuilding{
 
     public void setGates(int gates) {
         this.gates = gates;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Stadium stadium = (Stadium) o;
+        return gates == stadium.gates;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(gates);
     }
 
     @Override
