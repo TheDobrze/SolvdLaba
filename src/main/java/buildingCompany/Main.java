@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<Building> clientBuilding = new ArrayList<>();
         IndividualClient individualClient = new IndividualClient(1,"Janusz","Kowalski",new Date(),20000,
                 clientBuilding);
@@ -23,6 +23,11 @@ public class Main {
         for(int i=0;i<individualClient.getClientBuilding().size();i++){
             System.out.println(individualClient.getClientBuilding().get(i));
         }
+
+        String string = "To test";
+        File file = new File("test.txt");
+        FileUtils.writeStringToFile(file,string,"UTF-8");
+
     }
 
     public static long countingUniqueWords() throws IOException{
@@ -45,6 +50,8 @@ public class Main {
 
         return count;
     }
+
+
 
 
 
