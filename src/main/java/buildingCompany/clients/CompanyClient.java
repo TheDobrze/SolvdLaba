@@ -1,19 +1,25 @@
 package buildingCompany.clients;
 
+import buildingCompany.Building;
+import buildingCompany.interfaces.Owner;
 import buildingCompany.interfaces.Requestor;
 
-final class CompanyClient implements Requestor {
+import java.util.List;
+
+public class CompanyClient implements Requestor, Owner {
 
     private String name;
     private CompanySize size;
     private int budget;
     final int krsNumber;
+    private List<Building> companyBuildings;
 
-    public CompanyClient(String name, CompanySize size, int budget, int krsNumber) {
+    public CompanyClient(String name, CompanySize size, int budget, int krsNumber, List<Building> companyBuildings) {
         this.name = name;
         this.size = size;
         this.budget = budget;
         this.krsNumber = krsNumber;
+        this.companyBuildings = companyBuildings;
     }
 
     public String getName() {
@@ -44,6 +50,10 @@ final class CompanyClient implements Requestor {
         return krsNumber;
     }
 
+    public List<Building> getCompanyBuildings() {
+        return companyBuildings;
+    }
+
     @Override
     public void Request() {
 
@@ -55,7 +65,13 @@ final class CompanyClient implements Requestor {
                 "name='" + name + '\'' +
                 ", size=" + size +
                 ", budget=" + budget +
-                ", krs number= "+ krsNumber+
+                ", krsNumber=" + krsNumber +
+                ", companyBuildings=" + companyBuildings +
                 '}';
+    }
+
+    @Override
+    public void addBuilding(Building building) {
+        companyBuildings.add(building);
     }
 }

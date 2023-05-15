@@ -41,10 +41,8 @@ public abstract class Building implements Buildable {
 
     @Override
     public String toString() {
-        return "Building{" +
-                "address='" + address + '\'' +
+        return "address='" + address + '\'' +
                 ", floors=" + floors +
-                ", garage=" + garage +
-                '}';
+                ", garage= " + garage + ", " ;
     }
 }

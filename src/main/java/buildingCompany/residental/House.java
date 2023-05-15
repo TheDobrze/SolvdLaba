@@ -54,11 +54,10 @@ public class House extends ResidentalBuilding{
 
     @Override
     public String toString() {
-        return "House{" +
+        return "House : " +
                 "attic=" + attic +
                 ", basement=" + basement +
                 ", garden=" + garden +
-                ", SwimmingPool=" + SwimmingPool +
-                "} " + super.toString();
+                ", SwimmingPool= " + SwimmingPool  + super.toString();
     }
 }

@@ -21,8 +21,6 @@ public abstract class ResidentalBuilding extends Building {
 
     @Override
     public String toString() {
-        return "ResidentalBuilding{" +
-                "capacity=" + capacity +
-                "} " + super.toString();
+        return "capacity= " + capacity +", "+ super.toString();
     }
 }
