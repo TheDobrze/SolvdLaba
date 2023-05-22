@@ -1,5 +1,6 @@
 package buildingCompany.employees;
 
+import buildingCompany.Enums.Salary;
 import buildingCompany.Person;
 import buildingCompany.interfaces.Payment;
 import buildingCompany.interfaces.Worker;
@@ -9,20 +10,20 @@ import java.util.Date;
 
 public class Designer extends Person implements Worker, Payment {
 
-    private int salary;
+    private Salary salary;
     private String speciality;
 
-    public Designer(int id, String name, String lastName, Date joined, int salary, String speciality) {
+    public Designer(int id, String name, String lastName, Date joined, Salary salary, String speciality) {
         super(id, name, lastName, joined);
         this.salary = salary;
         this.speciality = speciality;
     }
 
-    public int getSalary() {
+    public Salary getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Salary salary) {
         this.salary = salary;
     }
 

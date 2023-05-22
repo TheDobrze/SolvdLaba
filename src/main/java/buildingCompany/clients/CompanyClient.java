@@ -1,6 +1,7 @@
 package buildingCompany.clients;
 
 import buildingCompany.Building;
+import buildingCompany.Enums.CompanySize;
 import buildingCompany.interfaces.Owner;
 import buildingCompany.interfaces.Requestor;
 
@@ -50,7 +51,7 @@ public class CompanyClient implements Requestor, Owner {
         return krsNumber;
     }
 
-    public List<Building> getCompanyBuildings() {
+    public List<Building> getClientBuildings() {
         return companyBuildings;
     }
 

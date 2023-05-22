@@ -48,6 +48,10 @@ public abstract class Person {
         this.joined = joined;
     }
 
+//    public void printName(){
+//        System.out.println(Name + " "+ LastName);
+//    }
+
     @Override
     public String toString() {
         return "Person{" +

@@ -39,8 +39,8 @@ public class Hotel extends ResidentalBuilding{
 
     @Override
     public String toString() {
-        return "Hotel{" +
-                "elevator=" + elevator +
+        return "Hotel{" + getAddress()+ ", floors"+ getFloors()+
+                ", elevator=" + elevator +
                 ", pool=" + pool +
                 ", buffet=" + buffet +
                 "} " + super.toString();
